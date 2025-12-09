@@ -184,10 +184,12 @@ export default function VideoCard({ video, isActive }) {
         .video-placeholder-text {
            color: white;
            text-align: center;
-           padding: 20px;
            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
            width: 100%;
            height: 100%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
         }
         .sidebar-actions {
            position: absolute;

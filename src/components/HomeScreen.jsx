@@ -35,16 +35,16 @@ export default function HomeScreen({ onSearch, onCategorySelect, currentCategory
       <div className="filters-container">
         <div className="toggle-group">
           <button
-            className={`toggle-btn ${currentCategory === 'Brainrot' ? 'active' : ''}`}
-            onClick={() => onCategorySelect('Brainrot')}
-          >
-            Brainrot
-          </button>
-          <button
             className={`toggle-btn ${currentCategory === 'Information' ? 'active' : ''}`}
             onClick={() => onCategorySelect('Information')}
           >
             Information
+          </button>
+          <button
+            className={`toggle-btn ${currentCategory === 'Brainrot' ? 'active' : ''}`}
+            onClick={() => onCategorySelect('Brainrot')}
+          >
+            Brainrot
           </button>
         </div>
       </div>

@@ -173,14 +173,15 @@ export default function ProfileScreen({ savedEvents = [], onPlayEvent }) {
            gap: 10px;
            padding: 20px;
         }
-        .action-buttons button {
-           flex: 1;
-           background: #262626;
-           padding: 8px;
-           border-radius: 8px;
-           font-weight: 600;
-           font-size: 14px;
-        }
+         .action-buttons button {
+            flex: 1;
+            background: var(--separator-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+         }
         .profile-nav {
            display: flex;
            border-top: 1px solid var(--separator-color);
@@ -195,8 +196,8 @@ export default function ProfileScreen({ savedEvents = [], onPlayEvent }) {
            cursor: pointer;
         }
         .profile-nav div.active {
-           color: #fff;
-           border-bottom: 2px solid #fff;
+           color: var(--text-color);
+           border-bottom: 2px solid var(--text-color);
         }
         .posts-grid {
            display: grid;

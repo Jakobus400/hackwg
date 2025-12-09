@@ -7,7 +7,7 @@ function App() {
   const [currentView, setCurrentView] = useState('feed');
   const [scrollTarget, setScrollTarget] = useState('home');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('Brainrot');
+  const [selectedCategory, setSelectedCategory] = useState('Information');
   const [addHomeSignal, setAddHomeSignal] = useState(0);
   const [savedEvents, setSavedEvents] = useState([]);
 

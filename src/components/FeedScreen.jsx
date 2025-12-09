@@ -14,18 +14,24 @@ const generateMockVideo = (category, i) => ({
     comments: Math.floor(Math.random() * 200),
     saves: Math.floor(Math.random() * 500),
     title: `Mock Topic: ${category} ${i}`,
-    bgColor: `linear-gradient(45deg, ${getRandomColor()}, ${getRandomColor()})`,
+    bgColor: getModernGradient(),
     url: null,
     isEvent: category === 'Events'
 });
 
-const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+const MODERN_GRADIENTS = [
+    'linear-gradient(135deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%)',
+    'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)',
+    'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)',
+    'linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)',
+    'linear-gradient(120deg, #f093fb 0%, #f5576c 100%)',
+    'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+    'linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)',
+];
+
+const getModernGradient = () => {
+    return MODERN_GRADIENTS[Math.floor(Math.random() * MODERN_GRADIENTS.length)];
 };
 
 export default function FeedScreen({
@@ -138,7 +144,7 @@ export default function FeedScreen({
                     saves: Math.floor(Math.random() * 500),
                     title: `Topic: ${cat} #${itemNumber}`, // Numbered title
                     url: selectedVideoUrl,
-                    bgColor: `linear-gradient(45deg, ${getRandomColor()}, ${getRandomColor()})`, // Nice placeholder
+                    bgColor: getModernGradient(), // Nice placeholder
                     isEvent: cat === 'Events'
                 });
             } else {
@@ -227,7 +233,7 @@ export default function FeedScreen({
                             <HomeScreen
                                 onSearch={onSearch}
                                 onCategorySelect={handleLocalCategorySelect}
-                                currentCategory={activeCategory || 'Brainrot'}
+                                currentCategory={activeCategory || 'Information'}
                             />
                         </div>
                     );
